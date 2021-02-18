@@ -1,4 +1,4 @@
-create table departement(
+/*create table departement(
     code_dep int,
     intitule_dep varchar(191),
     nom varchar(191),
@@ -108,7 +108,7 @@ create table renfermer(
     constraint pk_renfermer primary key(num_bliv,code_pro),
     constraint fk_renfermer_bliv foreign key(num_bliv) references bon_livraison(num_bliv),
     constraint fk_renfermer_produit foreign key(code_pro) references produit(code_pro)
-);
+);*/
 /*
 alter table departement add constraint pk_departement primary key(code_dep);
 alter table employe(
@@ -168,3 +168,61 @@ drop table contenir;
 */
 
 select count(*) from user_constraints where trunc(last_change) = DATE '2021-02-18';
+select tablespace_name,file_name,bytes/1024/1024 as size_in_mb,status from dba_temp_files;
+select tablespace_name from dba_tablespaces;
+create tablespace TB_MINIPROJET 
+    DATAFILE 'E:\projects\tablespace\tbs_miniprojet.dbf' size 100M AUTOEXTEND on online;
+    online;
+create TEMPORARY tablespace temp_miniprojet 
+    TEMPFILE 'E:\projects\tablespace\temp_miniprojet.dbf' size 30m autoextend on;
+create undo tablespace undo_miniprojet
+    datafile 'E:\projects\tablespace\undo_miniprojet.dbf' size 50m autoextend on online;
+
+
+/*create users*/    
+create user administrateur identified by 123456 
+    default tablespace tb_miniprojet
+    temporary tablespace temp_miniprojet
+    password expire;
+
+create user utilisateur1 identified by 123456
+    default tablespace tb_miniprojet
+    temporary tablespace temp_miniprojet
+    password expire;
+    
+create user utilisateur2 identified by 123456
+    default tablespace tb_miniprojet
+    temporary tablespace temp_miniprojet
+    password expire;
+/*end creation des utilisateurs*/
+/*creation des roles*/
+create role dbadmin;
+create role gestion_interne;
+create role gestion_externe;
+/*privilege*/
+grant dba to dbadmin;
+grant dbadmin to administrateur;
+grant create session to gestion_interne;
+grant create session to gestion_externe;
+grant 
+
+grant gestion_interne to utilisateur1;
+grant gestion_externe to utilisateur2;
+
+
+/* moving the tables to the new tablespace */
+alter table employe move tablespace tb_miniprojet;
+alter table categorie move tablespace tb_miniprojet;
+alter table departement move tablespace tb_miniprojet;
+alter table produit move tablespace tb_miniprojet;
+alter table fournisseur move tablespace tb_miniprojet;
+alter table bon_sortie move tablespace tb_miniprojet;
+alter table se_refere move tablespace tb_miniprojet;
+alter table bon_affectation move tablespace tb_miniprojet;
+alter table concerner move tablespace tb_miniprojet;
+alter table commande move tablespace tb_miniprojet;
+alter table contenir move tablespace tb_miniprojet;
+alter table bon_livraison move tablespace tb_miniprojet;
+alter table renfermer move tablespace tb_miniprojet;
+
+
