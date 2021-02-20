@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+}
+
+group 'org.kabli.managementsystem'
+version '1.0-SNAPSHOT'
+
+sourceSets.main.resources.srcDirs("src/main/java").includes.addAll(["**/*.fxml", "**/*.css"])
+sourceSets.main.resources.srcDirs("src/main/resources").includes.addAll(["**/*.*"])
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.23'
+}
+
+javafx {
+    version = "15.0.1"
+    modules = [ 'javafx.controls' ,'javafx.base' ,'javafx.fxml','javafx.graphics']
+}
+
+mainClassName = 'com.kabli.managementsystem.Launch'
