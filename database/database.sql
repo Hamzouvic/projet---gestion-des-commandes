@@ -204,12 +204,32 @@ grant dba to dbadmin;
 grant dbadmin to administrateur;
 grant create session to gestion_interne;
 grant create session to gestion_externe;
-grant 
-
+grant select,update,delete on produit to gestion_interne;
+grant select,update,delete on categorie to gestion_interne;
+grant select on departement to gestion_externe;
+grant select on employe to gestion_externe;
+grant select,update,delete on fournisseur to gestion_externe;
 grant gestion_interne to utilisateur1;
 grant gestion_externe to utilisateur2;
+/*20-2-21*/
+/*sequence*/
+create sequence seq_departement 
+    increment by 1
+    start with 1
+    nocycle
+    order;
+select SEQ_DEPARTEMENT.currval from dual;
+/*to use it we must use seq_departement while inserting into the table */
 
 
+/*trigger*/
+create or replace trigger produit_qte_check
+    after update on produit
+    
+
+
+/*end 20-2-21*/
+/* should i grant privileges on all the tables in relation with product or just the ones that product have its primary key*/
 /* moving the tables to the new tablespace */
 alter table employe move tablespace tb_miniprojet;
 alter table categorie move tablespace tb_miniprojet;
