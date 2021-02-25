@@ -1,2 +1,8 @@
 com/kabli/managementsystem/Launch.java
  com.kabli.managementsystem.Launch
+com/kabli/managementsystem/dal/GestionExterne.java
+ com.kabli.managementsystem.dal.GestionExterne
+com/kabli/managementsystem/dal/Database.java
+ com.kabli.managementsystem.dal.Database
+com/kabli/managementsystem/ui/AuthorisationController.java
+ com.kabli.managementsystem.ui.AuthorisationController

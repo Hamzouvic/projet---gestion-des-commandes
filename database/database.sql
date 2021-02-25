@@ -200,7 +200,7 @@ create role dbadmin;
 create role gestion_interne;
 create role gestion_externe;
 /*privilege*/
-grant dba to dbadmin;
+grant create session to dbadmin;
 grant dbadmin to administrateur;
 grant create session to gestion_interne;
 grant create session to gestion_externe;
