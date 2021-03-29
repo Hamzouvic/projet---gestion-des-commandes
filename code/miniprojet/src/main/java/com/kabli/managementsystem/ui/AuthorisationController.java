@@ -1,5 +1,7 @@
 package com.kabli.managementsystem.ui;
 
+import com.kabli.managementsystem.Launch;
+import com.kabli.managementsystem.application.AuthenticationLogic;
 import com.kabli.managementsystem.dal.Database;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,12 +18,11 @@ public class AuthorisationController {
     @FXML
     TextField username;
 
-    public void check(ActionEvent actionEvent) throws SQLException {
+    public void check(ActionEvent actionEvent) throws Exception {
         if (password.getText().isBlank() || username.getText().isBlank()){
             username.requestFocus();
             return;
         }
-        Database.connect(username.getText(),password.getText());
-
+        new AuthenticationLogic(username.getText(),password.getText());
     }
 }

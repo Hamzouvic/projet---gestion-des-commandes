@@ -1,8 +1,65 @@
-com/kabli/managementsystem/Launch.java
- com.kabli.managementsystem.Launch
+com/kabli/managementsystem/models/Commande.java
+ com.kabli.managementsystem.models.Commande
+com/kabli/managementsystem/models/Fournisseur.java
+ com.kabli.managementsystem.models.Fournisseur
 com/kabli/managementsystem/dal/GestionExterne.java
  com.kabli.managementsystem.dal.GestionExterne
-com/kabli/managementsystem/dal/Database.java
- com.kabli.managementsystem.dal.Database
+com/kabli/managementsystem/application/AuthenticationLogic.java
+ com.kabli.managementsystem.application.AuthenticationLogic
+ com.kabli.managementsystem.application.AuthenticationLogic$1
+com/kabli/managementsystem/ui/Admin.java
+ com.kabli.managementsystem.ui.Admin
+com/kabli/managementsystem/ui/MyView.java
+ com.kabli.managementsystem.ui.MyView
+com/kabli/managementsystem/ui/components/test.java
+ com.kabli.managementsystem.ui.components.test
+com/kabli/managementsystem/ui/customClass.java
+ com.kabli.managementsystem.ui.customClass
+com/kabli/managementsystem/models/ProduitBonLivraison.java
+ com.kabli.managementsystem.models.ProduitBonLivraison
+com/kabli/managementsystem/models/BonAffectation.java
+ com.kabli.managementsystem.models.BonAffectation
 com/kabli/managementsystem/ui/AuthorisationController.java
  com.kabli.managementsystem.ui.AuthorisationController
+com/kabli/managementsystem/models/Departement.java
+ com.kabli.managementsystem.models.Departement
+com/kabli/managementsystem/models/Employe.java
+ com.kabli.managementsystem.models.Employe
+com/kabli/managementsystem/models/BonLivraison.java
+ com.kabli.managementsystem.models.BonLivraison
+com/kabli/managementsystem/models/BonSortie.java
+ com.kabli.managementsystem.models.BonSortie
+com/kabli/managementsystem/dal/Commande.java
+ com.kabli.managementsystem.dal.Commande
+com/kabli/managementsystem/ui/BasicViewController.java
+ com.kabli.managementsystem.ui.BasicViewController
+com/kabli/managementsystem/models/SeRefere.java
+ com.kabli.managementsystem.models.SeRefere
+com/kabli/managementsystem/models/Categorie.java
+ com.kabli.managementsystem.models.Categorie
+com/kabli/managementsystem/Launch.java
+ com.kabli.managementsystem.Launch
+com/kabli/managementsystem/ui/components/TableFrame.java
+ com.kabli.managementsystem.ui.components.TableFrame
+com/kabli/managementsystem/dal/Database.java
+ com.kabli.managementsystem.dal.Database
+com/kabli/managementsystem/models/Produit.java
+ com.kabli.managementsystem.models.Produit
+com/kabli/managementsystem/models/ProduitBonAffectation.java
+ com.kabli.managementsystem.models.ProduitBonAffectation
+com/kabli/managementsystem/ui/AdminController.java
+ com.kabli.managementsystem.ui.AdminController
+com/kabli/managementsystem/application/Roles.java
+ com.kabli.managementsystem.application.Roles
+com/kabli/managementsystem/CONSTANTS.java
+ com.kabli.managementsystem.CONSTANTS
+com/kabli/managementsystem/models/ProduitCommande.java
+ com.kabli.managementsystem.models.ProduitCommande
+com/kabli/managementsystem/application/CommandeLogic.java
+ com.kabli.managementsystem.application.CommandeLogic
+com/kabli/managementsystem/ui/components/FournissurController.java
+ com.kabli.managementsystem.ui.components.FournissurController
+com/kabli/managementsystem/dal/Fournisseur.java
+ com.kabli.managementsystem.dal.Fournisseur
+com/kabli/managementsystem/application/FournisseurLogic.java
+ com.kabli.managementsystem.application.FournisseurLogic

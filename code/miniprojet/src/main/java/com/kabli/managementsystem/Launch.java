@@ -9,18 +9,26 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import javax.xml.crypto.Data;
+import java.io.IOException;
 import java.sql.SQLException;
 
 public class Launch extends Application {
+    private static Scene scene;
+    private Parent root;
+
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/com/kabli/managementsystem/ui/Authorisation.fxml"));
-        Scene scene = new Scene(root);
+        root = FXMLLoader.load(getClass().getResource("/com/kabli/managementsystem/ui/Authorisation.fxml"));
+        scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
 
     public static void main(String[] args) {
         Application.launch(args);
+    }
+
+    public static Scene getScene(){
+        return scene;
     }
 }
